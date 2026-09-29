@@ -589,6 +589,7 @@ select {
 /* ---------- תמונות השראה ---------- */
 
 .card-visual {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -605,9 +606,13 @@ select {
 }
 
 .card-visual .swatch-strip {
-  height: 14px;
-  border: 0;
-  border-radius: 0;
+  position: absolute;
+  top: 8px;
+  inset-inline: 8px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .4);
 }
 
 .card.disabled .card-visual img { filter: grayscale(1); }
