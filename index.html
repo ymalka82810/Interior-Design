@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>עיצוב פנים קרוב לבית</title>
+  <meta name="description" content="בוחרים סגנון עיצוב ופלטת צבעים, ומוצאים פריטים מתאימים בחנויות הקרובות לבית.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>עיצוב פנים קרוב לבית</h1>
+    <p>בוחרים סגנון ופלטת צבעים, ואנחנו מוצאים פריטים מתאימים בחנויות הקרובות אליכם.</p>
+  </header>
+
+  <main>
+    <section id="step-style" class="step">
+      <h2><span class="step-num">1</span> בחרו סגנון עיצוב</h2>
+      <div id="style-list" class="card-grid"></div>
+    </section>
+
+    <section id="step-palette" class="step" hidden>
+      <h2><span class="step-num">2</span> בחרו פלטת צבעים</h2>
+      <div id="palette-list" class="card-grid"></div>
+    </section>
+
+    <section id="step-location" class="step" hidden>
+      <h2><span class="step-num">3</span> איפה אתם גרים?</h2>
+      <div class="location-row">
+        <button type="button" id="btn-geo" class="btn">📍 השתמשו במיקום שלי</button>
+        <span class="or">או</span>
+        <select id="city-select" aria-label="בחירת עיר">
+          <option value="">בחרו עיר מהרשימה</option>
+        </select>
+      </div>
+      <p id="geo-status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="step" hidden>
+      <div class="results-head">
+        <h2>פריטים שמצאנו עבורכם</h2>
+        <div class="filters">
+          <label>קטגוריה
+            <select id="category-select"></select>
+          </label>
+          <label>מרחק
+            <select id="radius-select">
+              <option value="all">הכול</option>
+              <option value="10">עד 10 ק"מ</option>
+              <option value="25">עד 25 ק"מ</option>
+              <option value="50">עד 50 ק"מ</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <p id="results-summary" class="status"></p>
+      <div id="item-list" class="item-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    הפריטים והחנויות באתר כרגע הם לדוגמה בלבד. הרכישה עצמה נעשית באתר החנות.
+  </footer>
+
+  <script src="data/styles.js"></script>
+  <script src="data/cities.js"></script>
+  <script src="data/stores.js"></script>
+  <script src="data/items.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
