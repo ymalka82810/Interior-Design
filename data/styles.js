@@ -34,6 +34,36 @@ const PALETTES = {
     description: 'אפור-כחלחל וכחול עמוק.',
     colors: ['#EEF1F4', '#9FB1C2', '#3E5366'],
     image: { src: 'images/inspiration/dusty-blue.jpg', alt: 'ספה אפורה-כחלחלה מול קיר כחול עמום', credit: 'Kari Shea', source: 'https://commons.wikimedia.org/wiki/File:Sofa_Side_Table_Kentwood_(Unsplash).jpg' }
+  },
+  'concrete-grey': {
+    name: 'בטון חשוף',
+    description: 'גווני אפור בטון גולמי, מקיר לרצפה.',
+    colors: ['#D6D3CD', '#A8A49C', '#5C5850']
+  },
+  'raw-steel': {
+    name: 'פלדה גולמית',
+    description: 'שחור מתכתי וגוונים אפורים קרים.',
+    colors: ['#C9CCCE', '#787D82', '#1C1F22']
+  },
+  'rust-copper': {
+    name: 'חלודה ונחושת',
+    description: 'נחושת חמה ואדום חלודה לצד אפור פחם.',
+    colors: ['#E3B08C', '#B5602F', '#2E2B29']
+  },
+  'mahogany-walnut': {
+    name: 'מהגוני ואגוז',
+    description: 'עץ כהה עשיר, מהגוני ואגוז חם.',
+    colors: ['#D9C2A6', '#8B5A2B', '#3E2417']
+  },
+  'burgundy-gold': {
+    name: 'בורדו וזהב',
+    description: 'בורדו עמוק וירוק יער עם נגיעות זהב.',
+    colors: ['#EDE0C8', '#6E1F2A', '#2F4A3C']
+  },
+  'cream-dark-wood': {
+    name: 'שמנת ועץ כהה',
+    description: 'שמנת רכה לצד מסגרות עץ כהות.',
+    colors: ['#F2EAD8', '#C9AE86', '#4A331E']
   }
 };
 
@@ -56,15 +86,15 @@ const STYLES = [
   {
     id: 'industrial',
     name: 'תעשייתי',
-    description: 'מתכת, בטון ועץ גולמי.',
-    palettes: [],
+    description: 'מתכת, בטון ועץ גולמי. קירות חשופים, גופי תאורה מתכתיים ונגיעות חלודה חמות.',
+    palettes: ['concrete-grey', 'raw-steel', 'rust-copper'],
     active: false
   },
   {
     id: 'classic',
     name: 'קלאסי / כפרי',
-    description: 'עיטורים, עץ כהה וחמימות.',
-    palettes: [],
+    description: 'עיטורים, עץ כהה וחמימות. ריהוט מעוצב, בדים עשירים וגוונים חמים ומזמינים.',
+    palettes: ['mahogany-walnut', 'burgundy-gold', 'cream-dark-wood', 'warm-neutral'],
     active: false
   }
 ];
