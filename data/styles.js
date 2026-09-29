@@ -118,13 +118,13 @@ const STYLES = [
     name: 'תעשייתי',
     description: 'מתכת, בטון ועץ גולמי. קירות חשופים, גופי תאורה מתכתיים ונגיעות חלודה חמות.',
     palettes: ['concrete-grey', 'raw-steel', 'rust-copper'],
-    active: false
+    active: true
   },
   {
     id: 'classic',
     name: 'קלאסי / כפרי',
     description: 'עיטורים, עץ כהה וחמימות. ריהוט מעוצב, בדים עשירים וגוונים חמים ומזמינים.',
     palettes: ['mahogany-walnut', 'burgundy-gold', 'cream-dark-wood', 'warm-neutral'],
-    active: false
+    active: true
   }
 ];
