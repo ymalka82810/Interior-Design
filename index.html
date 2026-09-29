@@ -16,7 +16,15 @@
     <p>בוחרים סגנון ופלטת צבעים, ואנחנו מוצאים פריטים מתאימים בחנויות הקרובות אליכם.</p>
   </header>
 
+  <nav class="tabs" aria-label="ניווט">
+    <div class="tabs-inner">
+      <a href="#search" id="tab-search" class="tab">חיפוש פריטים</a>
+      <a href="#room" id="tab-room" class="tab">החדר שלי <span id="room-count" class="tab-count" hidden></span></a>
+    </div>
+  </nav>
+
   <main>
+    <div id="view-search">
     <section id="step-style" class="step">
       <h2><span class="step-num">1</span> בחרו סגנון עיצוב</h2>
       <div id="style-list" class="card-grid"></div>
@@ -56,8 +64,15 @@
           </label>
         </div>
       </div>
+      <figure id="inspiration" class="inspiration" hidden></figure>
       <p id="results-summary" class="status"></p>
       <div id="item-list" class="item-grid"></div>
+    </section>
+    </div>
+
+    <section id="view-room" class="step" hidden>
+      <h2 id="room-title">החדר שלי</h2>
+      <div id="room-content"></div>
     </section>
   </main>
 
