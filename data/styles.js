@@ -34,6 +34,21 @@ const PALETTES = {
     description: 'אפור-כחלחל וכחול עמוק.',
     colors: ['#EEF1F4', '#9FB1C2', '#3E5366'],
     image: { src: 'images/inspiration/dusty-blue.jpg', alt: 'ספה אפורה-כחלחלה מול קיר כחול עמום', credit: 'Kari Shea', source: 'https://commons.wikimedia.org/wiki/File:Sofa_Side_Table_Kentwood_(Unsplash).jpg' }
+  },
+  'birch-oak': {
+    name: 'ליבנה ואלון בהיר',
+    description: 'לבן חלבי, עץ ליבנה בהיר וגוון אלון טבעי.',
+    colors: ['#F7F4EE', '#E4D6BC', '#C9A26D']
+  },
+  'soft-pastel': {
+    name: 'פסטל רך',
+    description: 'ורוד אבקתי, תכלת בהיר ולבן שבור.',
+    colors: ['#FAF4F0', '#F1D9DA', '#B7CFDC']
+  },
+  'rattan-tan': {
+    name: 'ראטן וחום זהוב',
+    description: 'שמנת חמה, קש ראטן וחום זהוב לצד טקסטיל טבעי.',
+    colors: ['#F4EEE1', '#D9BE8F', '#8C6A45']
   }
 };
 
@@ -49,8 +64,8 @@ const STYLES = [
   {
     id: 'scandi',
     name: 'סקנדינבי / בוהו',
-    description: 'עץ בהיר, טקסטיל וצמחים.',
-    palettes: [],
+    description: 'עץ בהיר, טקסטיל טבעי וצמחים. חלל מואר ונעים עם נגיעות ראטן וגוונים רכים.',
+    palettes: ['birch-oak', 'soft-pastel', 'rattan-tan', 'warm-neutral', 'sage'],
     active: false
   },
   {
