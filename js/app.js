@@ -74,8 +74,19 @@
     return (km < 10 ? km.toFixed(1) : Math.round(km)) + ' ק"מ';
   }
 
-  function formatPrice(price) {
-    return '₪' + price.toLocaleString('he-IL');
+  function formatPrice(item) {
+    const amount = '₪' + item.price.toLocaleString('he-IL', { maximumFractionDigits: 2 });
+    return item.priceFrom ? 'החל מ-' + amount : amount;
+  }
+
+  // הסניף הקרוב ביותר של הרשת למיקום המשתמש
+  function nearestBranch(store, location) {
+    let best = null;
+    store.branches.forEach((branch) => {
+      const km = distanceKm(location, branch);
+      if (!best || km < best.km) best = { branch, km };
+    });
+    return best;
   }
 
   function scrollToSection(id) {
@@ -202,7 +213,9 @@
       .filter((item) => item.styles.includes(state.styleId) && item.palettes.includes(state.paletteId))
       .map((item) => {
         const store = STORES.find((s) => s.id === item.storeId);
-        return store ? { item, store, km: distanceKm(state.location, store) } : null;
+        if (!store || !store.branches.length) return null;
+        const { branch, km } = nearestBranch(store, state.location);
+        return { item, store, branch, km };
       })
       .filter(Boolean);
   }
@@ -219,22 +232,25 @@
     $('radius-select').value = state.radius;
   }
 
-  function itemCard({ item, store, km }) {
+  function itemCard({ item, store, branch, km }) {
     const visual = item.image
       ? el('img', { class: 'item-image', src: item.image, alt: item.name, loading: 'lazy' })
       : swatch(item.colors, 'item-swatch');
 
-    const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + store.lat + ',' + store.lng;
+    // חיפוש לפי שם הסניף והכתובת, כדי שהניווט יגיע לחנות עצמה גם כשהקואורדינטות מקורבות
+    const mapUrl = 'https://www.google.com/maps/search/?api=1&query=' +
+      encodeURIComponent(store.name + ' ' + branch.name + ', ' + branch.address);
 
     return el('article', { class: 'item-card' }, [
       visual,
       el('div', { class: 'item-body' }, [
         el('span', { class: 'item-category', text: item.category }),
         el('h3', { text: item.name }),
-        el('p', { class: 'item-price', text: formatPrice(item.price) }),
+        item.variants ? el('p', { class: 'item-variants', text: item.variants }) : null,
+        el('p', { class: 'item-price', text: formatPrice(item) }),
         el('p', { class: 'item-store' }, [
           el('strong', { text: store.name }),
-          document.createTextNode(' · ' + store.city + ' · ' + formatKm(km))
+          document.createTextNode(' · סניף ' + branch.name + ' · ' + formatKm(km))
         ]),
         el('div', { class: 'item-actions' }, [
           item.url

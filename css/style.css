@@ -258,6 +258,7 @@ select {
 
 .item-category { color: var(--muted); font-size: .8rem; }
 .item-body h3 { margin: 0; font-size: 1.05rem; font-weight: 500; }
+.item-variants { margin: 0; color: var(--muted); font-size: .85rem; }
 .item-price { margin: 2px 0; font-size: 1.15rem; font-weight: 700; }
 .item-store { margin: 0 0 10px; color: var(--muted); font-size: .9rem; }
 .item-store strong { color: var(--text); font-weight: 500; }
