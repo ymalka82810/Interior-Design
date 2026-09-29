@@ -49,6 +49,21 @@ const PALETTES = {
     name: 'ורוד אבק',
     description: 'ורוד מאובק רך לצד שמנת ואפור חם.',
     colors: ['#F6ECE9', '#D9B3AC', '#9C6F68']
+  },
+  'birch-oak': {
+    name: 'ליבנה ואלון בהיר',
+    description: 'לבן חלבי, עץ ליבנה בהיר וגוון אלון טבעי.',
+    colors: ['#F7F4EE', '#E4D6BC', '#C9A26D']
+  },
+  'soft-pastel': {
+    name: 'פסטל רך',
+    description: 'ורוד אבקתי, תכלת בהיר ולבן שבור.',
+    colors: ['#FAF4F0', '#F1D9DA', '#B7CFDC']
+  },
+  'rattan-tan': {
+    name: 'ראטן וחום זהוב',
+    description: 'שמנת חמה, קש ראטן וחום זהוב לצד טקסטיל טבעי.',
+    colors: ['#F4EEE1', '#D9BE8F', '#8C6A45']
   }
 };
 
@@ -64,8 +79,8 @@ const STYLES = [
   {
     id: 'scandi',
     name: 'סקנדינבי / בוהו',
-    description: 'עץ בהיר, טקסטיל וצמחים.',
-    palettes: [],
+    description: 'עץ בהיר, טקסטיל טבעי וצמחים. חלל מואר ונעים עם נגיעות ראטן וגוונים רכים.',
+    palettes: ['birch-oak', 'soft-pastel', 'rattan-tan', 'warm-neutral', 'sage'],
     active: false
   },
   {
