@@ -34,6 +34,21 @@ const PALETTES = {
     description: 'אפור-כחלחל וכחול עמוק.',
     colors: ['#EEF1F4', '#9FB1C2', '#3E5366'],
     image: { src: 'images/inspiration/dusty-blue.jpg', alt: 'ספה אפורה-כחלחלה מול קיר כחול עמום', credit: 'Kari Shea', source: 'https://commons.wikimedia.org/wiki/File:Sofa_Side_Table_Kentwood_(Unsplash).jpg' }
+  },
+  'terracotta': {
+    name: 'טרקוטה חמה',
+    description: 'חימר צרוב, כתום עמום וחום אדמה.',
+    colors: ['#F2E4D8', '#D98E5C', '#8C4A2F']
+  },
+  'charcoal-navy': {
+    name: 'פחם וכחול כהה',
+    description: 'כחול-פחם עמוק לצד אפור פלדה.',
+    colors: ['#E7E9EC', '#5A6B7A', '#1F2B38']
+  },
+  'dusty-rose': {
+    name: 'ורוד אבק',
+    description: 'ורוד מאובק רך לצד שמנת ואפור חם.',
+    colors: ['#F6ECE9', '#D9B3AC', '#9C6F68']
   }
 };
 
@@ -42,7 +57,7 @@ const STYLES = [
     id: 'modern',
     name: 'מודרני / מינימליסטי',
     description: 'קווים נקיים, משטחים חלקים ומעט פריטים. כל פריט בחדר צריך להצדיק את מקומו.',
-    palettes: ['mono-light', 'black-white', 'warm-neutral', 'sage', 'dusty-blue'],
+    palettes: ['mono-light', 'black-white', 'warm-neutral', 'sage', 'dusty-blue', 'terracotta', 'charcoal-navy', 'dusty-rose'],
     image: { src: 'images/inspiration/modern.jpg', alt: 'סלון לבן עם ספה אפורה ומנורה שחורה', credit: 'Breather', source: 'https://commons.wikimedia.org/wiki/File:Cozy_interior_with_a_sofa_(Unsplash).jpg' },
     active: true
   },
